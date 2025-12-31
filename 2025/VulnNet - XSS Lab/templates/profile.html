@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>VulnNet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">VulnNet</div>
+    <div>
+      {% if current_user %}
+        <span>Hola, {{ current_user }}</span>
+        <a href="/">Inicio</a>
+        <a href="/notifications">Notificaciones</a>
+        <a href="/logout">Salir</a>
+      {% else %}
+        <a href="/login">Iniciar sesión</a>
+        <a href="/register">Registrarse</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="container">
+<h2>Perfil de {{ user[1] }}</h2>
+<p>Sesión iniciada como: <strong>{{ current_user }}</strong></p>
+<p>Nombre visible: {{ user[2] }}</p>
+<p><a href="/">Volver</a></p>
+</div>
+</body>
+</html>

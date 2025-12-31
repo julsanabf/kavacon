@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <title>VulnNet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">VulnNet</div>
+    <div>
+      {% if current_user %}
+        <span>Hola, {{ current_user }}</span>
+        <a href="/">Inicio</a>
+        <a href="/notifications">Notificaciones</a>
+        <a href="/logout">Salir</a>
+      {% else %}
+        <a href="/login">Iniciar sesión</a>
+        <a href="/register">Registrarse</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="container">
+<h2>Usuarios disponibles</h2>
+<p>Sesión iniciada como: <strong>{{ current_user }}</strong></p>
+<ul>
+  {% for u in users %}
+    <li>
+      <a href="/profile/{{ u[0] }}">{{ u[1] }}</a>
+      - <a href="/follow/{{ u[0] }}">Seguir</a>
+    </li>
+  {% endfor %}
+</ul>
+<p><a href="/notifications">Ver notificaciones</a> | <a href="/logout">Cerrar sesión</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6ecf0;
+  margin: 0;
+  padding: 0;
+  color: #14171a;
+}
+
+.navbar {
+  background-color: #1da1f2;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #1da1f2;
+  border-bottom: 2px solid #1da1f2;
+  padding-bottom: 5px;
+}
+
+a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0d95e8;
+}
+
+.notification {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #1da1f2;
+}
+
